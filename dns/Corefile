@@ -1,0 +1,5 @@
+.:53 {
+    file /zones/lab.local.db lab.local
+    log
+    errors
+}

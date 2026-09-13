@@ -1,0 +1,71 @@
+services:
+  web:
+    build: ./web
+    container_name: enum-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "8443:8443"
+
+  auth:
+    build: ./auth
+    container_name: enum-auth
+    restart: unless-stopped
+    expose:
+      - "9000"
+
+  ftp:
+    build: ./ftp
+    container_name: enum-ftp
+    restart: unless-stopped
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    environment:
+      FTP_USER: student
+      FTP_PASS: training-only
+    volumes:
+      - ./ftp/files:/srv/ftp
+
+  smb:
+    build: ./smb
+    container_name: enum-smb
+    restart: unless-stopped
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ./smb/public:/srv/samba/public
+
+  snmp:
+    build: ./snmp
+    container_name: enum-snmp
+    restart: unless-stopped
+    ports:
+      - "161:161/udp"
+
+  ssh-alt:
+    build: ./ssh
+    container_name: enum-ssh-alt
+    restart: unless-stopped
+    ports:
+      - "2222:22"
+
+  mystery:
+    build: ./mystery
+    container_name: enum-mystery
+    restart: unless-stopped
+    ports:
+      - "31337:31337"
+
+  dns:
+    image: coredns/coredns:1.11.3
+    container_name: enum-dns
+    restart: unless-stopped
+    command: -conf /Corefile
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - ./dns/Corefile:/Corefile:ro
+      - ./dns/lab.local.db:/zones/lab.local.db:ro

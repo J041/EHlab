@@ -1,0 +1,3 @@
+Legacy portal notes:
+- Shared administrator account still in use: admin
+- Password policy has not been updated since migration.

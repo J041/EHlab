@@ -1,0 +1,13 @@
+Instructor flag mapping
+=======================
+
+FLAG{web_content_enumeration_complete} -> D6AkVUh1FEBVXLXjsa6Lw7ETJ95YdJW1
+FLAG{ftp_anonymous_enumeration_complete} -> uUyyo0i16y3lIbZfw1Anq63OJJRtTxKv
+FLAG{smb_share_enumeration_complete} -> TmZzRYggE3XLwK5x65tJscyMIVTFLfMr
+FLAG{snmp_enumeration_complete} -> 0uiKwKIDOMK3bcAxWG4eVEQu8z2GKONM
+FLAG{non_standard_ssh_port_identified} -> 2xkCpdAy4l6tGZ3YUhv1xd6Gf7i9Kzn9
+FLAG{virtual_host_discovered} -> mqYIG8ynxdQfcZQuPkO55mh2VPUDXWdd
+FLAG{service_detection_not_port_assumption} -> uHvvZPjAxIPfZJuDMRPEHIAvW1njHoz7
+FLAG{username_enumeration_and_weak_password_success} -> epITL6KxA2JrCFPUdabmIxQI0AQXTKUa
+
+DNS TXT enumeration -> fA5WJ5aD7GqFr7AVO5tX2dm7k9eHpjta

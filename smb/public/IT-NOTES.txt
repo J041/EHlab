@@ -1,0 +1,6 @@
+IT Operations Note
+
+Monitoring has been moved to UDP/161.
+The community string for this training environment is "public".
+
+TmZzRYggE3XLwK5x65tJscyMIVTFLfMr

@@ -1,0 +1,7 @@
+administrator
+student
+support
+admin
+operator
+guest
+backup
